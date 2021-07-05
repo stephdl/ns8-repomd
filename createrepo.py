@@ -49,7 +49,8 @@ defaults = {
         "bug_url": "https://github.com/NethServer/dev",
         "code_url": "https://github.com/NethServer/"
     },
-    "source": "ghcr.io/nethserver"
+    "source": "ghcr.io/nethserver",
+    "versions": []
 }
 
 # Get current working directory if no path is specified
@@ -65,15 +66,17 @@ for entry_path in glob.glob(path + '/*'): # do not match .git and similar
 
     # make sure to copy the defaults and do not just creating a reference
     metadata = copy.deepcopy(defaults)
+    # prepare default values
+    metadata["name"] = entry_name
+    metadata["description"]["en"] = f"Auto-generated description for {entry_name}"
+    metadata["source"] = f"{metadata['source']}/{entry_name}"
+
     version_labels = {}
     metadata_file = os.path.join(entry_name, "metadata.json")
     if os.path.isfile(metadata_file):
         with open(metadata_file) as metadata_fp:
-            metadata = json.load(metadata_fp)
-    else:
-        metadata["name"] = entry_name
-        metadata["description"]["en"] = f"Auto-generated description for {entry_name}"
-        metadata["source"] = f"{metadata['source']}/{entry_name}"
+            # merge defaults and JSON file, the latter one has precedence
+            metadata = {**metadata, **json.load(metadata_fp)}
 
     # add log if the file is present and it's a png
     logo = os.path.join(entry_name, "logo.png")
@@ -88,8 +91,6 @@ for entry_path in glob.glob(path + '/*'): # do not match .git and similar
             for screenshot in sdir:
                 if imghdr.what(screenshot) == "png":
                     metadata["screenshots"].append(os.path.join("screenshots",screenshot.name))
-    else:
-        metadata["screenshots"] = []
 
     print("Inspect " + metadata["source"])
     # Parse the image info from remote registry to retrieve tags
