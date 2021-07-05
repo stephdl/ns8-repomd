@@ -1,0 +1,42 @@
+name: repomd
+on:
+  - push
+  - workflow_dispatch
+
+jobs:
+  repomd:
+    runs-on: ubuntu-20.04
+    steps:
+    - id: checkout
+      uses: actions/checkout@v2
+
+    - id: gitconfig
+      run: |
+        # Configure git environment
+        git config user.name nethbot
+        git config user.email nethbot@nethesis.it
+
+    - id: buildmd
+      run: bash createrepo.sh
+
+    - id: publish
+      name: "Publish the repository metadata"
+      run: |
+        BRANCH=$(basename ${{ github.ref }})
+        COMMIT_MESSAGE="repomd@$BRANCH"
+        REMOTE_BRANCH="repomd"
+        mkdir -p .dst
+        mv repodata.json .dst/
+        git add .dst/
+        TREE=$(git write-tree --prefix=.dst)
+        COMMIT=$(git commit-tree -m "${COMMIT_MESSAGE}" ${TREE})
+        git push -f origin $COMMIT:refs/heads/${REMOTE_BRANCH}
+        echo "Repository metadata has been published to"
+        echo ""
+        echo "    https://raw.githubusercontent.com/${{ github.repository }}/${REMOTE_BRANCH}/repodata.json"
+        echo ""
+        echo "Source"
+        echo ""
+        echo "    https://github.com/${{ github.repository }}/tree/${REMOTE_BRANCH}"
+        echo ""
+
