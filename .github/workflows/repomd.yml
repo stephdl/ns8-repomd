@@ -27,6 +27,7 @@ jobs:
         REMOTE_BRANCH="repomd"
         mkdir -p .dst
         mv repodata.json .dst/
+        cp -a $(ls -d */) .dst/
         git add .dst/
         TREE=$(git write-tree --prefix=.dst)
         COMMIT=$(git commit-tree -m "${COMMIT_MESSAGE}" ${TREE})
