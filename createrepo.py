@@ -70,6 +70,8 @@ for entry_path in glob.glob(path + '/*'): # do not match .git and similar
     metadata["name"] = entry_name
     metadata["description"]["en"] = f"Auto-generated description for {entry_name}"
     metadata["source"] = f"{metadata['source']}/{entry_name}"
+    # this field will be used to calculate the base name of images
+    metadata["id"] = entry_name
 
     version_labels = {}
     metadata_file = os.path.join(entry_name, "metadata.json")
@@ -78,7 +80,7 @@ for entry_path in glob.glob(path + '/*'): # do not match .git and similar
             # merge defaults and JSON file, the latter one has precedence
             metadata = {**metadata, **json.load(metadata_fp)}
 
-    # add log if the file is present and it's a png
+    # add logo if the file is present and it's a PNG
     logo = os.path.join(entry_name, "logo.png")
     if os.path.isfile(logo):
         if imghdr.what(logo) == "png":
