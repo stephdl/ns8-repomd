@@ -5,7 +5,7 @@
     "en": "MariaDB Server is a SQL database, with its user interface PhpMyadmin"
   },
   "categories": [
-    "MySql Database"
+    "database"
   ],
   "authors": [
     {
