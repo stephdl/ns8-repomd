@@ -118,4 +118,4 @@ for entry_path in glob.glob(path + '/*'): # do not match .git and similar
     index.append(metadata)
 
 with open (os.path.join(path, 'repodata.json'), 'w') as outfile:
-    json.dump(index, outfile, indent=4)
+    json.dump(index, outfile, separators=(',', ':'))
