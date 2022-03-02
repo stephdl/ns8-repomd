@@ -1,0 +1,21 @@
+{
+  "name": "Nextcloud",
+  "description": {
+    "en": "Nextcloud Hub is an integrated Open Source content collaboration platform"
+  },
+  "categories": [
+    "collaboration"
+  ],
+  "authors": [
+    {
+      "name": "Giacomo Sanchietti",
+      "email": "giacomo.sanchietti@nethesis.it"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://docs.nextcloud.com/",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-nextcloud"
+  },
+  "source": "ghcr.io/nethserver/nextcloud"
+}
