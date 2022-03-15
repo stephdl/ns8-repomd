@@ -1,0 +1,19 @@
+{
+  "name": "minio",
+  "description": {
+    "en": "MinIO: S3 compatible object storage"
+  },
+  "categories": ["storage"],
+  "authors": [
+    {
+      "name": "Giacomo Sanchietti",
+      "email": "giacomo.sanchietti@nethserver.org"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://docs.min.io/",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-minio"
+  },
+  "source": "ghcr.io/nethserver/minio"
+}
