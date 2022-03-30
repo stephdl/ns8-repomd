@@ -27,6 +27,10 @@ jobs:
         BRANCH=$(basename ${{ github.ref }})
         COMMIT_MESSAGE="repomd@$BRANCH"
         REMOTE_BRANCH="repomd"
+        if [[ "${BRANCH}" != "main" ]]; then
+            echo "Skipping metadata publication for branch '${BRANCH}'"
+            exit 0
+        fi
         mkdir -p .dst
         mv repodata.json .dst/
         cp -a $(ls -d */) .dst/
