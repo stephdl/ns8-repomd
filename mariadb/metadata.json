@@ -1,5 +1,5 @@
 {
-  "name": "mariadb",
+  "name": "MariaDB",
   "source": "ghcr.io/nethserver/mariadb",
   "description": {
     "en": "MariaDB Server is a SQL database, with its user interface PhpMyadmin"

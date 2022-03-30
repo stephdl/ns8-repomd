@@ -1,5 +1,5 @@
 {
-  "name": "minio",
+  "name": "MinIO",
   "description": {
     "en": "MinIO: S3 compatible object storage"
   },
