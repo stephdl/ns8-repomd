@@ -1,5 +1,5 @@
 {
-  "name": "Dokuwiki",
+  "name": "DokuWiki",
   "source": "ghcr.io/nethserver/dokuwiki",
   "description": {
     "en": "Wiki that doesn't require a database"
