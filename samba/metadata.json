@@ -1,7 +1,7 @@
 {
   "name": "samba",
   "description": {
-    "en": "NethServer 8 core"
+    "en": "NethServer 8 core account provider module"
   },
   "categories": ["core"],
   "authors": [
@@ -13,7 +13,7 @@
   "docs": {
     "documentation_url": "https://nethserver.github.io/ns8-core",
     "bug_url": "https://github.com/NethServer/dev",
-    "code_url": "https://github.com/NethServer/ns8-core"
+    "code_url": "https://github.com/NethServer/ns8-samba"
   },
   "source": "ghcr.io/nethserver/samba"
 }
