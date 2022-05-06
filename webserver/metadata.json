@@ -1,0 +1,21 @@
+{
+  "name": "Webserver",
+  "source": "ghcr.io/nethserver/webserver",
+  "description": {
+    "en": "Webserver is Nginx based with php-fpm, SFTPgo can be used to upload and manage website contents"
+  },
+  "categories": [
+    "web"
+  ],
+  "authors": [
+    {
+      "name": "stephane de Labrusse",
+      "email": "stephdl@de-labrusse.fr"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://hub.docker.com/_/nginx",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-webserver"
+  }
+}
