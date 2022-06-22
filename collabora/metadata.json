@@ -1,0 +1,22 @@
+{
+  "name": "Collabora",
+  "source": "ghcr.io/nethserver/collabora",
+  "description": {
+    "en": "Collabora Online is a powerful LibreOffice-based online office."
+  },
+  "categories": [
+    "collaboration"
+  ],
+  "authors": [
+    {
+      "name": "Stephane de Labrusse",
+      "email": "stephdl@de-labrusse.fr"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://www.collaboraoffice.com/code/",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-collabora"
+  }
+}
+
