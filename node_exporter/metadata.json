@@ -1,0 +1,19 @@
+{
+  "name": "node_exporter",
+  "description": {
+    "en": "Prometheus node_exporter"
+  },
+  "categories": ["monitoring"],
+  "authors": [
+    {
+      "name": "Giacomo Sanchietti",
+      "email": "giacomo.sanchietti@gmail.com"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://github.com/prometheus/node_exporter",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-node_exporter"
+  },
+  "source": "ghcr.io/nethserver/node_exporter"
+}

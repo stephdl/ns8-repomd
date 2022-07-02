@@ -1,0 +1,19 @@
+{
+  "name": "grafana",
+  "description": {
+    "en": "Grafana"
+  },
+  "categories": [],
+  "authors": [
+    {
+      "name": "Giacomo Sanchietti",
+      "email": "giacomo.sanchietti@nethesis.it"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://docs.grafana.org/",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-grafana"
+  },
+  "source": "ghcr.io/nethserver/grafana"
+}
