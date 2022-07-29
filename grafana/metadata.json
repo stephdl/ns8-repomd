@@ -1,7 +1,7 @@
 {
-  "name": "grafana",
+  "name": "Grafana",
   "description": {
-    "en": "Grafana"
+    "en": "Query, visualize, and alert on data"
   },
   "categories": [],
   "authors": [
