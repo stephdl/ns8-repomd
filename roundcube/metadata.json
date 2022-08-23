@@ -1,0 +1,21 @@
+{
+  "name": "roundcube",
+  "source": "ghcr.io/nethserver/roundcube",
+  "description": {
+    "en": "Roundcube is a web-based IMAP email client."
+  },
+  "categories": [
+    "collaboration"
+  ],
+  "authors": [
+    {
+      "name": "Stephane de Labrusse",
+      "email": "stephdl@de-labrusse.fr"
+    }
+  ],
+  "docs": {
+    "documentation_url": "https://docs.roundcube.net/doc/help/1.1/en_US/",
+    "bug_url": "https://github.com/NethServer/dev",
+    "code_url": "https://github.com/NethServer/ns8-roundcubemail"
+  }
+}
