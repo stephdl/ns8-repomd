@@ -1,6 +1,6 @@
 {
   "name": "roundcube",
-  "source": "ghcr.io/nethserver/roundcube",
+  "source": "ghcr.io/nethserver/roundcubemail",
   "description": {
     "en": "Roundcube is a web-based IMAP email client."
   },
